@@ -144,7 +144,7 @@
                             </div>
                             <div class="bg-emerald-50 p-6 rounded-xl text-center">
                                 <p class="text-sm text-gray-500 mb-2 font-bold uppercase">Despachos Realizados</p>
-                                <p class="text-5xl font-bold text-emerald-600">29</p>
+                                <p class="text-5xl font-bold text-emerald-600">32</p>
                             </div>
                         </div>
                     </div>
@@ -171,30 +171,36 @@
                         <table class="data-table">
                             <thead>
                                 <tr>
-                                    <th class="w-1/2">Cliente</th>
-                                    <th class="w-1/2">Frente</th>
+                                    <th class="w-1/3">Cliente</th>
+                                    <th class="w-1/3">Frente</th>
+                                    <th class="w-1/3">Atuação</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="font-semibold text-gray-700">BRA</td>
+                                    <td class="font-semibold text-gray-700">BRADESCO</td>
                                     <td>GUSTAVO HENRIQUE</td>
+                                    <td><span class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs font-bold border border-blue-100">ELABORAÇÃO DE ESTRATÉGIA</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="font-semibold text-gray-700">MERCADO LIVRE</td>
+                                    <td class="font-semibold text-gray-700">M. LIVRE</td>
                                     <td>CARLOS HENRIQUE</td>
+                                    <td><span class="bg-purple-50 text-purple-700 px-2 py-1 rounded text-xs font-bold border border-purple-100">MANIFESTAÇÃO ESTRATÉGICA</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="font-semibold text-gray-700">MERCADO LIVRE</td>
+                                    <td class="font-semibold text-gray-700">M. LIVRE</td>
                                     <td>PEDRO BOHER</td>
+                                    <td><span class="bg-purple-50 text-purple-700 px-2 py-1 rounded text-xs font-bold border border-purple-100">MANIFESTAÇÃO ESTRATÉGICA</span></td>
                                 </tr>
                                 <tr>
                                     <td class="font-semibold text-gray-700">NUBANK</td>
                                     <td>JULIO NASCIMENTO</td>
+                                    <td><span class="bg-purple-50 text-purple-700 px-2 py-1 rounded text-xs font-bold border border-purple-100">MANIFESTAÇÃO ESTRATÉGICA</span></td>
                                 </tr>
                                 <tr>
                                     <td class="font-semibold text-gray-700">SERASA</td>
                                     <td>WESLEY MIGUEL</td>
+                                    <td><span class="bg-emerald-50 text-emerald-700 px-2 py-1 rounded text-xs font-bold border border-emerald-100">DESPACHOS</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -230,17 +236,61 @@
                     </div>
 
                     <!-- Condenação em Litigância de Má-fé -->
-                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden flex flex-col">
                          <div class="bg-purple-50 px-6 py-4 border-b border-purple-100 flex justify-between items-center">
                             <h3 class="font-bold text-purple-800 text-lg uppercase tracking-wider">Condenação Litigância Má-fé</h3>
                             <i class="fa-solid fa-gavel text-purple-500 text-xl"></i>
                         </div>
-                        <div class="p-8 flex items-center justify-center">
-                            <div class="text-center">
+                        <div class="p-8 flex-grow flex flex-col items-center justify-center">
+                            <div class="text-center mb-6">
                                 <p class="text-6xl font-bold text-purple-600">37</p>
-                                <p class="text-sm font-bold text-gray-500 uppercase mt-2">Total</p>
+                                <p class="text-sm font-bold text-gray-500 uppercase mt-2">Total Consolidado</p>
+                            </div>
+                            <div class="flex gap-6 w-full justify-center border-t border-gray-100 pt-6">
+                                <div class="text-center px-6">
+                                    <p class="text-3xl font-bold text-gray-800">9</p>
+                                    <p class="text-xs font-bold text-gray-400 uppercase mt-1">Nubank</p>
+                                </div>
+                                <div class="text-center px-6 border-l border-gray-200">
+                                    <p class="text-3xl font-bold text-gray-800">28</p>
+                                    <p class="text-xs font-bold text-gray-400 uppercase mt-1">Serasa</p>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-blue-500 mt-2">
+                    <h3 class="font-bold text-gray-800 mb-6 flex items-center gap-2 uppercase tracking-wider">
+                        <i class="fa-solid fa-chart-line text-blue-500"></i> Comparativo de Entradas dos Agressores
+                    </h3>
+                    <div class="overflow-x-auto">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th class="w-1/3">Cliente</th>
+                                    <th class="w-1/3 text-center">Julho</th>
+                                    <th class="w-1/3 text-center">Agosto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="font-semibold text-gray-700">SERASA</td>
+                                    <td class="text-center text-gray-600">+165</td>
+                                    <td class="text-center font-bold text-red-600">+207 <i class="fa-solid fa-arrow-trend-up ml-1 text-sm"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold text-gray-700">NUBANK</td>
+                                    <td class="text-center text-gray-600">+127</td>
+                                    <td class="text-center font-bold text-red-600">+187 <i class="fa-solid fa-arrow-trend-up ml-1 text-sm"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold text-gray-700">BRADESCO</td>
+                                    <td class="text-center text-gray-600">+29</td>
+                                    <td class="text-center font-bold text-red-600">+90 <i class="fa-solid fa-arrow-trend-up ml-1 text-sm"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
