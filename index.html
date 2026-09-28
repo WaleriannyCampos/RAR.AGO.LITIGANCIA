@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Resultados (RAR) - Agosto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f3f4f6;
+        }
+        h1, h2, h3, .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Generic Theme Colors replacing original branding */
+        .bg-theme-primary {
+            background-color: #2c3e50;
+        }
+        .text-theme-primary {
+            color: #2c3e50;
+        }
+        .border-theme-primary {
+            border-color: #2c3e50;
+        }
+        .tab-active {
+            border-bottom: 3px solid #2c3e50;
+            color: #2c3e50;
+            background-color: rgba(44, 62, 80, 0.05);
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Table Styles */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+        .data-table th {
+            background-color: #f8f9fa;
+            text-align: left;
+            padding: 10px;
+            font-weight: 600;
+            color: #4b5563;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        .data-table td {
+            padding: 10px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .data-table tr:hover {
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Cabeçalho / Navegação -->
+    <header class="bg-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <!-- Generic Logo Placeholder -->
+                    <div class="bg-theme-primary w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-xl">RJ</div>
+                    <span class="font-poppins font-bold text-xl text-gray-800">Relatório Jurídico</span>
+                </div>
+                <nav class="hidden md:flex space-x-4 h-full items-center text-sm font-semibold uppercase tracking-wider">
+                    <button onclick="showSection('visao-geral')" class="nav-btn tab-active px-4 py-7 transition-all duration-300 hover:text-slate-600" id="btn-visao-geral">Visão Geral</button>
+                    <button onclick="showSection('estrategico')" class="nav-btn px-4 py-7 transition-all duration-300 hover:text-slate-600" id="btn-estrategico">Atuação Estratégica</button>
+                    <button onclick="showSection('resultados')" class="nav-btn px-4 py-7 transition-all duration-300 hover:text-slate-600" id="btn-resultados">Resultados</button>
+                </nav>
+                <div class="md:hidden">
+                    <button class="text-theme-primary p-2"><i class="fa-solid fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        
+        <!-- SECÇÃO: VISÃO GERAL -->
+        <section id="visao-geral" class="content-section active">
+            <div class="bg-theme-primary text-white py-12">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2 class="text-3xl font-bold mb-2">RAR - AGOSTO</h2>
+                    <p class="text-slate-300">Resumo Consolidado de Dados</p>
+                </div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 py-10 space-y-8">
+                
+                <!-- Produção e Identificação -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    
+                    <!-- Advogados Identificados -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-theme-primary">
+                        <h3 class="font-bold text-gray-800 mb-6 flex items-center gap-2 uppercase tracking-wider">
+                            <i class="fa-solid fa-users text-theme-primary"></i> Advogados Identificados
+                        </h3>
+                        <div class="flex items-center justify-center mb-6">
+                            <div class="text-center">
+                                <p class="text-5xl font-bold text-theme-primary">14</p>
+                                <p class="text-sm font-bold text-gray-500 uppercase mt-1">Total</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div class="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                <p class="text-2xl font-bold text-slate-700">5</p>
+                                <p class="text-xs font-bold text-gray-500 uppercase mt-1">Monitorados</p>
+                            </div>
+                            <div class="bg-red-50 p-4 rounded-lg border border-red-100">
+                                <p class="text-2xl font-bold text-red-700">5</p>
+                                <p class="text-xs font-bold text-gray-500 uppercase mt-1">Agressores</p>
+                            </div>
+                            <div class="bg-orange-50 p-4 rounded-lg border border-orange-100">
+                                <p class="text-2xl font-bold text-orange-700">4</p>
+                                <p class="text-xs font-bold text-gray-500 uppercase mt-1">Fraudadores</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produção -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-emerald-500 flex flex-col justify-center">
+                         <h3 class="font-bold text-gray-800 mb-6 flex items-center gap-2 uppercase tracking-wider">
+                            <i class="fa-solid fa-file-signature text-emerald-500"></i> Produção
+                        </h3>
+                        <div class="grid grid-cols-2 gap-8">
+                            <div class="bg-emerald-50 p-6 rounded-xl text-center">
+                                <p class="text-sm text-gray-500 mb-2 font-bold uppercase">Dossiês Elaborados</p>
+                                <p class="text-5xl font-bold text-emerald-600">8</p>
+                            </div>
+                            <div class="bg-emerald-50 p-6 rounded-xl text-center">
+                                <p class="text-sm text-gray-500 mb-2 font-bold uppercase">Despachos Realizados</p>
+                                <p class="text-5xl font-bold text-emerald-600">29</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECÇÃO: ATUAÇÃO ESTRATÉGICA -->
+        <section id="estrategico" class="content-section">
+            <div class="bg-slate-800 text-white py-12">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2 class="text-3xl font-bold mb-2">Atuação Estratégica</h2>
+                    <p class="text-gray-400">Operações e Frentes de Atuação com Manifestações e Peticionamentos</p>
+                </div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 py-10">
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <div class="bg-slate-50 px-6 py-4 border-b border-slate-200">
+                        <h3 class="font-bold text-slate-800 text-lg uppercase tracking-wider">Frentes de Atuação por Cliente</h3>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th class="w-1/2">Cliente</th>
+                                    <th class="w-1/2">Frente</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="font-semibold text-gray-700">BRA</td>
+                                    <td>GUSTAVO HENRIQUE</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold text-gray-700">MERCADO LIVRE</td>
+                                    <td>CARLOS HENRIQUE</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold text-gray-700">MERCADO LIVRE</td>
+                                    <td>PEDRO BOHER</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold text-gray-700">NUBANK</td>
+                                    <td>JULIO NASCIMENTO</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold text-gray-700">SERASA</td>
+                                    <td>WESLEY MIGUEL</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECÇÃO: RESULTADOS -->
+        <section id="resultados" class="content-section">
+            <div class="bg-indigo-900 text-white py-12">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2 class="text-3xl font-bold mb-2">Resultados e Condenações</h2>
+                    <p class="text-indigo-200">Total Geral de Decisões Favoráveis e Litigância de Má-fé</p>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 py-10 space-y-8">
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Decisões Favoráveis -->
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                         <div class="bg-blue-50 px-6 py-4 border-b border-blue-100 flex justify-between items-center">
+                            <h3 class="font-bold text-blue-800 text-lg uppercase tracking-wider">Decisões Favoráveis</h3>
+                            <i class="fa-solid fa-check-circle text-blue-500 text-xl"></i>
+                        </div>
+                        <div class="p-8 flex items-center justify-center">
+                            <div class="text-center">
+                                <p class="text-6xl font-bold text-blue-600">309</p>
+                                <p class="text-sm font-bold text-gray-500 uppercase mt-2">Total</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Condenação em Litigância de Má-fé -->
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                         <div class="bg-purple-50 px-6 py-4 border-b border-purple-100 flex justify-between items-center">
+                            <h3 class="font-bold text-purple-800 text-lg uppercase tracking-wider">Condenação Litigância Má-fé</h3>
+                            <i class="fa-solid fa-gavel text-purple-500 text-xl"></i>
+                        </div>
+                        <div class="p-8 flex items-center justify-center">
+                            <div class="text-center">
+                                <p class="text-6xl font-bold text-purple-600">37</p>
+                                <p class="text-sm font-bold text-gray-500 uppercase mt-2">Total</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-8 mt-8">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>&copy; 2024 - Relatório de Performance Jurídica</p>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Esconde todas as secções
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Mostra a secção alvo
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.classList.add('active');
+            }
+
+            // Atualiza os estilos das abas
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('tab-active');
+            });
+            const activeBtn = document.getElementById('btn-' + sectionId);
+            if (activeBtn) {
+                activeBtn.classList.add('tab-active');
+            }
+
+            // Rola para o topo
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
